@@ -37,11 +37,26 @@
     </style>
 </head>
 <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">Jovian Careers</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#jobs">Jobs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <main class="container py-5 text-center">
         <h1 class="mb-3">Welcome to Jovian Careers</h1>
         <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&q=80" alt="Jovian Careers" class="img-fluid rounded shadow-sm mb-3" style="width: 300px; height: auto;">
-        <p class="lead">Join Our Team gdfgfgfg</p>
-    <h2>Current Openings</h2>
+        <p id="about" class="lead">Join Our Team gdfgfgfg</p>
+    <h2 id="jobs">Current Openings</h2>
     {% for job in jobs %}
         <p>{{ loop.index }}. {{ job.title }} - {{ job.location }} - {{ job.salary }}</p>
     {% endfor %}
